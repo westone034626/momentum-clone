@@ -239,6 +239,7 @@ footer {
   border: none;
   background-color: rgba(255, 255, 255, 0.5);
   padding: 10px 0;
+  text-align: center;
 }
 
 .todoList__list input:focus {
@@ -247,6 +248,7 @@ footer {
 
 .todoList__list input::placeholder {
   margin-left: 10px;
+  text-align: center;
 }
 
 @media screen and (max-width: 600px) {
