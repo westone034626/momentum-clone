@@ -46,6 +46,10 @@ footer {
   display: block;
 }
 
+.non-showing {
+  display: none;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
