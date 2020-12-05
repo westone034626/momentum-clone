@@ -12,7 +12,7 @@ function getWeather(lat, lng) {
     .then(function (json) {
       const temperature = json.main.temp;
       const place = json.name;
-      weather.innerHTML = `${temperature} @ ${place}`;
+      weather.innerHTML = `${temperature}℃ - ${place}`;
     });
 }
 
@@ -32,7 +32,7 @@ function handleGeoSucces(position) {
 }
 
 function handleGeoError() {
-  console.log("Cant access geo location");
+  weather.innerHTML = "날씨정보 조회실패";
 }
 
 function askForCoords() {

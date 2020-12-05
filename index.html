@@ -1,46 +1,69 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Something</title>
+    <title>TO DO LIST</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="./src/index.css" />
   </head>
   <body>
     <div class="momentum">
       <header>
-        <h1>To do list</h1>
-        <div class="clock js-clock">
-          <h1 class="clock__date js-clock-date"></h1>
-          <h1 class="clock__time js-clock-time"></h1>
+        <div class="column--33"><h1>To do list</h1></div>
+        <div class="column--33">
+          <div class="greeting">
+            <form class="js-form form">
+              <input
+                type="text"
+                placeholder="What is your name?"
+                required
+                maxlength="10"
+              />
+            </form>
+            <div class="greetings">
+              <h4>Hello!</h4>
+              &nbsp
+              <h4 class="js-greetings"></h4>
+            </div>
+          </div>
+        </div>
+        <div class="column--33">
+          <div class="clock js-clock">
+            <h1 class="clock__date js-clock-date"></h1>
+            <h1 class="clock__time js-clock-time"></h1>
+          </div>
         </div>
       </header>
 
       <main>
-        <div class="greeting">
-          <form class="js-form form">
-            <input type="text" placeholder="What is your name?" />
+        <div class="todoList__form">
+          <form class="js-toDoForm">
+            <input
+              type="text"
+              placeholder="Write a to do"
+              required
+              maxlength="27"
+            />
           </form>
-          <div class="greeting__text greetings">
-            <h4>Hello!</h4>
-            &nbsp
-            <h4 class="js-greetings"></h4>
+          <div class="todoList__buttons">
+            <button
+              class="todoList__button js-toDoButton--todo todoList__button__active"
+            >
+              할 일 목록
+            </button>
+            <button class="todoList__button js-toDoButton--finish">
+              완료한 목록
+            </button>
           </div>
         </div>
-        <div class="todoList">
-          <div class="todoList__form">
-            <form class="js-toDoForm">
-              <input type="text" placeholder="Write a to do" />
-            </form>
-            <button class="todoList__button js-toDoButton"></button>
-          </div>
-
-          <div class="todoList__list">
-            <ul class="js-toDoList"></ul>
-            <ul class="js-finishList"></ul>
-          </div>
+        <div class="todoList__list">
+          <ul class="js-toDoList"></ul>
+          <ul class="js-finishList non-showing"></ul>
         </div>
       </main>
       <footer>
+        <div class="alert-message">
+          <span class="alert-message__text">더블 클릭: 수정 / ESC: 취소</span>
+        </div>
         <div class="weather">
           <span class="weather__text js-weather"></span>
         </div>

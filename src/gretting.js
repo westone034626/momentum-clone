@@ -1,6 +1,9 @@
 const form = document.querySelector(".js-form"),
   input = form.querySelector("input"),
-  greeting = document.querySelector(".js-greetings");
+  greeting = document.querySelector(".js-greetings"),
+  greetingContainer = document.querySelector(".greetings"),
+  helloMSG = greetingContainer.querySelector("h4"),
+  main = document.querySelector("main");
 
 const USER_LS = "currentUser",
   SHOWING_CN = "showing";
@@ -10,26 +13,30 @@ function saveName(text) {
 }
 
 const handleSubmitNewGreeting = (event) => {
-  if (event.value !== "" && event.key === "Enter") {
+  if (event.target.value !== "" && event.key === "Enter") {
     const div = event.target.parentNode;
     const h4 = document.createElement("h4");
     h4.addEventListener("dblclick", handleEditGreeting);
     h4.innerHTML = event.target.value;
     saveName(event.target.value);
     div.replaceChild(h4, event.target);
+    helloMSG.classList.remove("non-showing");
   } else if (event.key === "Escape") {
     const div = event.target.parentNode;
     const h4 = document.createElement("h4");
     h4.innerHTML = event.target.name;
     h4.addEventListener("dblclick", handleEditGreeting);
     div.replaceChild(h4, event.target);
+    helloMSG.classList.remove("non-showing");
   }
 };
 
 const handleEditGreeting = (event) => {
+  helloMSG.classList.add("non-showing");
   const div = event.target.parentNode;
   const input = document.createElement("input");
-
+  input.placeholder = "What is your name?";
+  input.maxLength = "10";
   input.value = event.target.innerHTML;
   input.name = event.target.innerHTML;
   input.addEventListener("keyup", handleSubmitNewGreeting);
@@ -50,7 +57,9 @@ function askForName() {
 
 function paintGreeting(text) {
   form.classList.remove(SHOWING_CN);
-  greeting.classList.add(SHOWING_CN);
+  greeting.parentNode.classList.add("greeting__text");
+  greeting.parentNode.classList.remove("greetings");
+  main.classList.add("showing--f");
   greeting.innerHTML = text;
 }
 
@@ -65,7 +74,7 @@ function loadName() {
 
 function init() {
   loadName();
+  greeting.addEventListener("dblclick", handleEditGreeting);
 }
 
 init();
-greeting.addEventListener("dblclick", handleEditGreeting);
