@@ -13,4 +13,5 @@
 - [ ] 이름 수정 기능
 - [x] Finish 기능
 - [x] Edit 기능(더블클릭시 진입)
+- [ ] 버튼에 따라 To do list와 Finish list 분류해서 보여주기
 - [ ] (옵션)open api 시도

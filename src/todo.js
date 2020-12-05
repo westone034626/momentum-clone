@@ -54,7 +54,6 @@ const handleEdit = (event) => {
   const isLi = event.target.closest("li");
   if (isLi) {
     const li = event.target.closest("li");
-    console.log(li);
     const span = li.querySelector("span");
     const input = document.createElement("input");
     input.value = span.innerHTML;
@@ -189,7 +188,6 @@ const getTaskObj = (text) => {
 
 function handleSubmit(event) {
   event.preventDefault();
-  console.log(toDoInput.value);
   if (event.value !== "") {
     const taskObj = getTaskObj(toDoInput.value);
     paintToDo(taskObj);
