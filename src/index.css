@@ -1,12 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
 @import "./reset.css";
 
+@font-face {
+  font-family: "LAB디지털";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/LAB디지털.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html,
 body {
   height: 100vh;
   width: 100vw;
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
+  font-family: "LAB디지털";
 }
 
 body {
