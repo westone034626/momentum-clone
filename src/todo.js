@@ -129,6 +129,7 @@ const handleFinish = (event) => {
     setTimeout(turnOffAlert, 5000);
   } else {
     const li = event.target.parentNode;
+
     // li를 토대로 toDos에서 taskObj를 뽑아낸다
     const taskObj = findInTodos(li.id);
 
@@ -154,7 +155,6 @@ const handleBack = (event) => {
     setTimeout(turnOffAlert, 5000);
   } else {
     const li = event.target.parentNode;
-
     // li를 토대로 toDos에서 taskObj를 뽑아낸다
     const taskObj = findInFinishes(li.id);
 

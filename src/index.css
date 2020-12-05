@@ -320,6 +320,14 @@ footer {
     margin-left: 10px;
   }
 
+  .momentum {
+    margin-top: 80px;
+    padding: 35px;
+    width: 100%;
+
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
   footer {
     width: 100%;
     display: flex;
@@ -330,5 +338,11 @@ footer {
 
   footer .weather {
     margin-top: 10px;
+  }
+
+  .todoList__list button {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 18px;
   }
 }
