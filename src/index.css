@@ -79,3 +79,19 @@ header {
   margin-top: 100px;
   font-size: 5rem;
 }
+
+.todoList__list li {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 150px;
+  padding: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.todoList__list input {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  color: white;
+}

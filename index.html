@@ -20,12 +20,17 @@
         </form>
       </div>
       <div class="todoList">
-        <button class="todoList__button js-toDoButton"></button>
-        <form class="js-toDoForm">
-          <input type="text" placeholder="Write a to do" />
-        </form>
-        <ul class="js-toDoList"></ul>
-        <ul class="js-finishList"></ul>
+        <div class="todoList__form">
+          <button class="todoList__button js-toDoButton"></button>
+          <form class="js-toDoForm">
+            <input type="text" placeholder="Write a to do" />
+          </form>
+        </div>
+
+        <div class="todoList__list">
+          <ul class="js-toDoList"></ul>
+          <ul class="js-finishList"></ul>
+        </div>
       </div>
     </main>
     <footer class="weather"><span class="js-weather"></span></footer>

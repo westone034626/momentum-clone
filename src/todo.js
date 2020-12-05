@@ -2,7 +2,7 @@ const toDoForm = document.querySelector(".js-toDoForm"),
   toDoInput = toDoForm.querySelector("input"),
   toDoList = document.querySelector(".js-toDoList"),
   finishList = document.querySelector(".js-finishList"),
-  entireTodoList = document.querySelector(".todoList"),
+  entireTodoList = document.querySelector(".todoList__list"),
   selectButton = document.querySelector(".js-toDoButton");
 
 const TODOS_LS = "toDos";
@@ -217,19 +217,19 @@ function loadState() {
 const handleSelectButton = (event) => {
   if (event.target.value === "true") {
     event.target.value = false;
-    event.target.innerHTML = "할 일 목록 보기";
+    event.target.innerHTML = "할 일 목록";
     finishList.classList.remove(NON_SHOWING);
     toDoList.classList.add(NON_SHOWING);
   } else if (event.target.value === "false") {
     event.target.value = true;
-    event.target.innerHTML = "완료한 목록 보기";
+    event.target.innerHTML = "완료한 목록";
     finishList.classList.add(NON_SHOWING);
     toDoList.classList.remove(NON_SHOWING);
   }
 };
 
 const loadButton = () => {
-  selectButton.innerHTML = "완료한 목록 보기";
+  selectButton.innerHTML = "완료한 목록";
   selectButton.value = "true";
   finishList.classList.add(NON_SHOWING);
 };
