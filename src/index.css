@@ -81,17 +81,27 @@ header {
 }
 
 .todoList__list li {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+.todoList__list span {
   background-color: rgba(0, 0, 0, 0.5);
   width: 150px;
   padding: 10px;
+  height: 10px;
   color: white;
-  display: flex;
-  align-items: center;
 }
 
 .todoList__list input {
   border: none;
+  border-bottom: 1px solid white;
   background-color: rgba(0, 0, 0, 0.5);
-
+  height: 10px;
+  width: 150px;
+  padding: 10px;
   color: white;
+  font-size: 15px;
+  font-family: "LAB디지털";
 }
