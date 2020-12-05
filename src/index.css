@@ -132,9 +132,10 @@ header .greeting__text {
 
   font-family: "Jeju Myeongjo", serif;
 
-  font-size: 15px;
+  font-size: 16px;
   background-color: rgba(255, 255, 255, 0.5);
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
+  border-radius: 0;
 }
 
 .greeting input:focus {
@@ -169,11 +170,12 @@ main .todoList__form {
   border: none;
   padding: 10px 0;
   text-align: center;
-
+  font-size: 16px;
   font-family: "Jeju Myeongjo", serif;
   font-size: 15px;
   background-color: rgba(255, 255, 255, 0.5);
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
+  border-radius: 0;
 }
 
 .todoList__form input:focus {
@@ -240,6 +242,8 @@ footer {
   background-color: rgba(255, 255, 255, 0.5);
   padding: 10px 0;
   text-align: center;
+  border-radius: 0;
+  font-size: 16px;
 }
 
 .todoList__list input:focus {
