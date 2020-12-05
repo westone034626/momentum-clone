@@ -11,6 +11,6 @@
 - [ ] 반응형 사이트로 만들기(배경화면 재선정)
 - [ ] transform, animation 넣기
 - [ ] 이름 수정 기능
-- [ ] Finish 기능
+- [x] Finish 기능
 - [ ] Edit 기능(더블클릭시 진입)
 - [ ] (옵션)open api 시도
