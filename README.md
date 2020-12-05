@@ -12,5 +12,5 @@
 - [ ] transform, animation 넣기
 - [ ] 이름 수정 기능
 - [x] Finish 기능
-- [ ] Edit 기능(더블클릭시 진입)
+- [x] Edit 기능(더블클릭시 진입)
 - [ ] (옵션)open api 시도

@@ -1,13 +1,68 @@
 const toDoForm = document.querySelector(".js-toDoForm"),
   toDoInput = toDoForm.querySelector("input"),
   toDoList = document.querySelector(".js-toDoList"),
-  finishList = document.querySelector(".js-finishList");
+  finishList = document.querySelector(".js-finishList"),
+  entireTodoList = document.querySelector(".todoList");
 
 const TODOS_LS = "toDos";
 const FINISH_LS = "finishes";
 
 let toDos = [];
 let finishes = [];
+
+const updateTodos = (id, text) => {
+  toDos.map((todo) => {
+    if (todo.id === id) {
+      todo.text = text;
+    }
+  });
+};
+
+const updateFinishes = (id, text) => {
+  finishes.map((finish) => {
+    if (finish.id === id) {
+      finish.text = text;
+    }
+  });
+};
+
+const isLiInTodos = (li) => {
+  return li.parentNode.matches(".js-toDoList");
+};
+
+const handleKeyup = (event) => {
+  if (event.target.value !== "" && event.key === "Enter") {
+    const li = event.target.parentNode;
+    const span = document.createElement("span");
+    span.innerHTML = event.target.value;
+    li.replaceChild(span, event.target);
+    if (isLiInTodos(li)) {
+      updateTodos(li.id, span.innerHTML);
+    } else {
+      updateFinishes(li.id, span.innerHTML);
+    }
+    saveState();
+  } else if (event.key === "Escape") {
+    const li = event.target.parentNode;
+    const span = document.createElement("span");
+    span.innerHTML = event.target.name;
+    li.replaceChild(span, event.target);
+  }
+};
+
+const handleEdit = (event) => {
+  const isLi = event.target.closest("li");
+  if (isLi) {
+    const li = event.target.closest("li");
+    console.log(li);
+    const span = li.querySelector("span");
+    const input = document.createElement("input");
+    input.value = span.innerHTML;
+    input.name = span.innerHTML;
+    input.addEventListener("keyup", handleKeyup);
+    li.replaceChild(input, span);
+  }
+};
 
 const findInTodos = (id) => {
   return toDos.find((toDo) => {
@@ -22,9 +77,9 @@ const findInFinishes = (id) => {
 };
 
 const removeFromTodos = (id) => {
-  toDos = toDos.filter((toDo) => {
+  return (toDos = toDos.filter((toDo) => {
     return id !== toDo.id;
-  });
+  }));
 };
 
 const removeFromFinishes = (id) => {
@@ -50,7 +105,7 @@ const handleFinish = (event) => {
   removeFromTodos(taskObj.id);
 
   // todo ul에서 지운다
-  todoList.removeChild(li);
+  toDoList.removeChild(li);
 
   // finish ul에 추가한다.
   paintFinish(taskObj);
@@ -109,7 +164,7 @@ function paintToDo(taskObj) {
   finishBtn.innerHTML = "✅";
   finishBtn.addEventListener("click", handleFinish);
   genericLi.appendChild(finishBtn);
-  todoList.appendChild(genericLi);
+  toDoList.appendChild(genericLi);
 }
 
 function handleDelete(event) {
@@ -165,6 +220,7 @@ function init() {
   saveState();
 
   toDoForm.addEventListener("submit", handleSubmit);
+  entireTodoList.addEventListener("dblclick", handleEdit);
 }
 
 init();
