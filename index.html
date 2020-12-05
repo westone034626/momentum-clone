@@ -6,38 +6,46 @@
     <link rel="stylesheet" href="./src/index.css" />
   </head>
   <body>
-    <header>
-      <div class="clock js-clock">
-        <h1 class="clock__date js-clock-date"></h1>
-        <h1 class="clock__time js-clock-time"></h1>
-      </div>
-    </header>
-
-    <main>
-      <div class="greeting">
-        <form class="js-form form">
-          <input type="text" placeholder="What is your name?" />
-        </form>
-        <div class="greeting__text greetings">
-          <h4>Hello,</h4>
-          <h4 class="js-greetings"></h4>
+    <div class="momentum">
+      <header>
+        <h1>To do list</h1>
+        <div class="clock js-clock">
+          <h1 class="clock__date js-clock-date"></h1>
+          <h1 class="clock__time js-clock-time"></h1>
         </div>
-      </div>
-      <div class="todoList">
-        <div class="todoList__form">
-          <button class="todoList__button js-toDoButton"></button>
-          <form class="js-toDoForm">
-            <input type="text" placeholder="Write a to do" />
+      </header>
+
+      <main>
+        <div class="greeting">
+          <form class="js-form form">
+            <input type="text" placeholder="What is your name?" />
           </form>
+          <div class="greeting__text greetings">
+            <h4>Hello!</h4>
+            &nbsp
+            <h4 class="js-greetings"></h4>
+          </div>
         </div>
+        <div class="todoList">
+          <div class="todoList__form">
+            <form class="js-toDoForm">
+              <input type="text" placeholder="Write a to do" />
+            </form>
+            <button class="todoList__button js-toDoButton"></button>
+          </div>
 
-        <div class="todoList__list">
-          <ul class="js-toDoList"></ul>
-          <ul class="js-finishList"></ul>
+          <div class="todoList__list">
+            <ul class="js-toDoList"></ul>
+            <ul class="js-finishList"></ul>
+          </div>
         </div>
-      </div>
-    </main>
-    <footer class="weather"><span class="js-weather"></span></footer>
+      </main>
+      <footer>
+        <div class="weather">
+          <span class="weather__text js-weather"></span>
+        </div>
+      </footer>
+    </div>
 
     <script src="./src/clock.js"></script>
     <script src="./src/gretting.js"></script>

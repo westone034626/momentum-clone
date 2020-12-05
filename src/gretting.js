@@ -1,9 +1,6 @@
 const form = document.querySelector(".js-form"),
   input = form.querySelector("input"),
-  greeting = document.querySelector(".js-greetings"),
-  clock = document.querySelector(".clock"),
-  footer = document.querySelector("footer"),
-  todoList = document.querySelector(".todoList");
+  greeting = document.querySelector(".js-greetings");
 
 const USER_LS = "currentUser",
   SHOWING_CN = "showing";
@@ -54,11 +51,6 @@ function askForName() {
 function paintGreeting(text) {
   form.classList.remove(SHOWING_CN);
   greeting.classList.add(SHOWING_CN);
-  greeting.parentNode.classList.add(SHOWING_CN);
-  todoList.classList.add(SHOWING_CN);
-  clock.classList.add(SHOWING_CN);
-  footer.classList.add(SHOWING_CN);
-
   greeting.innerHTML = text;
 }
 
