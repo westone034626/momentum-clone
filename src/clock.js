@@ -2,17 +2,22 @@ const clockContainer = document.querySelector(".js-clock");
 const clockDate = document.querySelector(".js-clock-date");
 const clockTitle = document.querySelector(".js-clock-time");
 const dayOfWeeks = {
-  0: "일요일",
-  1: "월요일",
-  2: "화요일",
-  3: "수요일",
-  4: "목요일",
-  5: "금요일",
-  6: "토요일",
+  0: "SUN",
+  1: "MON",
+  2: "TUE",
+  3: "WED",
+  4: "THU",
+  5: "FRI",
+  6: "SAT",
 };
 
 function getTodayDate(y, m, d, dOW) {
-  return `${y}년 ${m + 1}월 ${d}일 ${dOW}`;
+  return `
+    ${y}. 
+    ${m + 1 < 10 ? `0${m + 1}` : m + 1}.
+    ${d < 10 ? `0${d}` : d}.
+    ${dOW}
+  `;
 }
 
 function getTodayTime(h, m, s) {
