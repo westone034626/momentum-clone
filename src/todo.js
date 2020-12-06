@@ -41,6 +41,7 @@ const handleKeyup = (event) => {
     const li = event.target.parentNode;
     const span = document.createElement("span");
     span.innerHTML = event.target.value;
+
     li.replaceChild(span, event.target);
     if (isLiInTodos(li)) {
       updateTodos(li.id, span.innerHTML);
@@ -58,6 +59,7 @@ const handleKeyup = (event) => {
   } else if (event.key === "Escape") {
     const li = event.target.parentNode;
     const span = document.createElement("span");
+
     span.innerHTML = event.target.name;
     li.replaceChild(span, event.target);
     li.querySelector(".delBtn").classList.remove("non-showing");
