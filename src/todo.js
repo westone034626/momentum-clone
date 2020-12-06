@@ -91,6 +91,7 @@ const handleEdit = (event) => {
     input.placeholder = "값을 수정하세요";
     input.addEventListener("keyup", handleKeyup);
     li.replaceChild(input, span);
+    input.focus();
   }
 };
 

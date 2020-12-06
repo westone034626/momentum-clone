@@ -41,6 +41,7 @@ const handleEditGreeting = (event) => {
   input.name = event.target.innerHTML;
   input.addEventListener("keyup", handleSubmitNewGreeting);
   div.replaceChild(input, event.target);
+  input.focus();
 };
 
 function handleSubmit(event) {
