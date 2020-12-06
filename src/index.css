@@ -107,6 +107,7 @@ main {
   max-width: 800px;
   padding: 35px;
   width: 65%;
+  overflow: auto;
   background-color: rgba(255, 255, 255, 1);
 }
 
@@ -344,11 +345,12 @@ footer {
 
   .momentum {
     box-sizing: border-box;
-    margin-top: 0;
+    margin-top: 10px;
     padding: 35px;
     max-width: 400px;
-    width: 100%;
+    width: 92%;
 
+    overflow: auto;
     background-color: rgba(255, 255, 255, 1);
   }
 
@@ -392,12 +394,22 @@ footer {
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 601px) and (max-width: 1200px) {
   html,
   body {
     width: 100vmin;
 
     height: 100vmax;
+  }
+
+  .momentum {
+    box-sizing: border-box;
+    margin-top: 100px;
+    padding: 35px;
+    max-width: 80%;
+    width: 80%;
+    overflow: auto;
+    background-color: rgba(255, 255, 255, 1);
   }
 
   .bgImage {
