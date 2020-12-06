@@ -90,7 +90,6 @@ main {
   /* Preserve aspet ratio */
   min-width: 100%;
   min-height: 100%;
-
   z-index: -1;
   animation: fadeIn 2s ease-in-out;
 }
@@ -100,7 +99,7 @@ main {
   padding: 35px;
   width: 65%;
 
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 1);
 }
 
 header {
@@ -139,7 +138,7 @@ header .greeting__text {
 }
 
 .greeting input:focus {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .greeting input::placeholder {
@@ -173,13 +172,13 @@ main .todoList__form {
   font-size: 16px;
   font-family: "Jeju Myeongjo", serif;
   font-size: 15px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 1);
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
   border-radius: 0;
 }
 
 .todoList__form input:focus {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .todoList__buttons {
@@ -199,7 +198,7 @@ main .todoList__form {
 }
 
 .todoList__buttons .todoList__button__active {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 main .todoList__list {
@@ -214,7 +213,7 @@ main .todoList__list {
 .todoList__list li {
   width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .todoList__list button {
@@ -239,7 +238,7 @@ footer {
   font-family: "Jeju Myeongjo", serif;
   width: 100%;
   border: none;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 1);
   padding: 10px 0;
   text-align: center;
   border-radius: 0;
@@ -247,7 +246,7 @@ footer {
 }
 
 .todoList__list input:focus {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .todoList__list input::placeholder {
@@ -331,7 +330,7 @@ footer {
     padding: 35px;
     width: 100%;
 
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 1);
   }
 
   footer {
