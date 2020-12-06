@@ -5,7 +5,8 @@ const toDoForm = document.querySelector(".js-toDoForm"),
   entireTodoList = document.querySelector(".todoList__list"),
   todoButton = document.querySelector(".js-toDoButton--todo"),
   finishButton = document.querySelector(".js-toDoButton--finish"),
-  alertMSG = document.querySelector(".alert-message__text");
+  alertMSG = document.querySelector(".alert-message__text"),
+  alertMSGSM = document.querySelector(".alert-message__text__sm");
 
 const TODOS_LS = "toDos";
 const FINISH_LS = "finishes";
@@ -126,6 +127,7 @@ const pushTodoToTodos = (toDo) => {
 const handleFinish = (event) => {
   if (finishList.children.length > 9) {
     alertMSG.innerHTML = "꽉 찼습니다.";
+    alertMSGSM.innerHTML = "꽉 찼습니다.";
     setTimeout(turnOffAlert, 5000);
   } else {
     const li = event.target.parentNode;
@@ -152,6 +154,7 @@ const handleFinish = (event) => {
 const handleBack = (event) => {
   if (toDoList.children.length > 9) {
     alertMSG.innerHTML = "꽉 찼습니다.";
+    alertMSGSM.innerHTML = "꽉 찼습니다.";
     setTimeout(turnOffAlert, 5000);
   } else {
     const li = event.target.parentNode;
@@ -228,7 +231,8 @@ const getTaskObj = (text) => {
 };
 
 const turnOffAlert = () => {
-  alertMSG.innerHTML = "더블 클릭: 수정 / ESC: 취소";
+  alertMSG.innerHTML = "더블 클릭: 수정모드 / ESC: 취소";
+  alertMSGSM.innerHTML = "더블 클릭: 수정모드";
 };
 
 function handleSubmit(event) {
@@ -236,6 +240,7 @@ function handleSubmit(event) {
   if (toDoList.children.length > 9) {
     toDoInput.value = "";
     alertMSG.innerHTML = "꽉 찼습니다.";
+    alertMSGSM.innerHTML = "꽉 찼습니다.";
     setTimeout(turnOffAlert, 5000);
   } else {
     if (event.value !== "") {

@@ -255,6 +255,10 @@ footer {
   text-align: center;
 }
 
+.alert-message__text__sm {
+  display: none;
+}
+
 @media screen and (max-width: 600px) {
   body {
     max-width: 500px;
@@ -351,5 +355,13 @@ footer {
     background-color: rgba(0, 0, 0, 0);
     font-size: 18px;
     padding: 3px;
+  }
+
+  .alert-message__text {
+    display: none;
+  }
+
+  .alert-message__text__sm {
+    display: block;
   }
 }

@@ -35,7 +35,7 @@ const handleEditGreeting = (event) => {
   helloMSG.classList.add("non-showing");
   const div = event.target.parentNode;
   const input = document.createElement("input");
-  input.placeholder = "What is your name?";
+  input.placeholder = "이름이 뭐에요?";
   input.maxLength = "10";
   input.value = event.target.innerHTML;
   input.name = event.target.innerHTML;
