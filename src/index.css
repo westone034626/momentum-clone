@@ -132,9 +132,10 @@ header .greeting__text {
   font-family: "Jeju Myeongjo", serif;
 
   font-size: 16px;
-  background-color: rgba(255, 255, 255, 0.5);
+
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
   border-radius: 0;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .greeting input:focus {
@@ -238,7 +239,7 @@ footer {
   font-family: "Jeju Myeongjo", serif;
   width: 100%;
   border: none;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(0, 0, 0, 0.1);
   padding: 10px 0;
   text-align: center;
   border-radius: 0;
@@ -349,5 +350,6 @@ footer {
     border: none;
     background-color: rgba(0, 0, 0, 0);
     font-size: 18px;
+    padding: 0;
   }
 }
