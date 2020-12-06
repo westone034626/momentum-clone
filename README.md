@@ -2,7 +2,7 @@
 
 [Link - Optimized desktop environment](https://westone034626.github.io/momentum-clone/)
 
-# 시연영상:
+# 시연영상(사진 클릭):
 
 [![링크클릭](https://user-images.githubusercontent.com/26649774/101277047-d92bb400-37f4-11eb-9c26-bc81c1b6d88b.png)](https://youtu.be/erWLDlD1BBs)
 
