@@ -89,6 +89,7 @@ const handleEdit = (event) => {
     input.name = span.innerHTML;
     input.maxLength = "27";
     input.placeholder = "값을 수정하세요";
+    input.autocomplete = "off";
     input.addEventListener("keyup", handleKeyup);
     li.replaceChild(input, span);
     input.focus();

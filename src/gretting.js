@@ -39,6 +39,7 @@ const handleEditGreeting = (event) => {
   input.maxLength = "10";
   input.value = event.target.innerHTML;
   input.name = event.target.innerHTML;
+  input.autocomplete = "off";
   input.addEventListener("keyup", handleSubmitNewGreeting);
   div.replaceChild(input, event.target);
   input.focus();
