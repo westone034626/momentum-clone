@@ -350,6 +350,6 @@ footer {
     border: none;
     background-color: rgba(0, 0, 0, 0);
     font-size: 18px;
-    padding: 0;
+    padding: 3px;
   }
 }
