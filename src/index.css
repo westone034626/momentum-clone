@@ -391,3 +391,24 @@ footer {
     animation: fadeIn 2s ease-in-out;
   }
 }
+
+@media screen and (max-width: 1200px) {
+  html,
+  body {
+    width: 100vmin;
+
+    height: 100vmax;
+  }
+
+  .bgImage {
+    position: fixed;
+    top: 0;
+    width: 100vmin;
+    height: 100vmax;
+
+    /* Preserve aspet ratio */
+
+    z-index: -1;
+    animation: fadeIn 2s ease-in-out;
+  }
+}
