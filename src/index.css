@@ -29,6 +29,31 @@
   width: 33%;
 }
 
+.column--30 {
+  width: 30%;
+}
+
+.column--10 {
+  width: 10%;
+}
+
+.column--40 {
+  width: 40;
+}
+
+.column--20 {
+  width: 20%;
+}
+
+.column--60 {
+  width: 60%;
+}
+
+.column--60 {
+  display: flex;
+  justify-content: center;
+}
+
 .column--33:nth-child(2) {
   display: flex;
   justify-content: center;
@@ -36,8 +61,8 @@
 
 html,
 body {
-  width: 100vmax;
-  height: 100vmin;
+  width: 100vw;
+  height: 100vh;
 }
 
 body {
@@ -98,8 +123,8 @@ main {
 .bgImage {
   position: fixed;
 
-  width: 100vmax;
-  height: 100vmin;
+  width: 100vw;
+  height: 100vh;
 
   /* Preserve aspet ratio */
 
@@ -110,7 +135,7 @@ main {
 .momentum {
   box-sizing: border-box;
   margin-top: 75px;
-  max-width: 800px;
+  max-width: 900px;
   padding: 35px;
   width: 65%;
   overflow: auto;
@@ -180,22 +205,21 @@ header .greeting__text {
   }
 }
 
-.greeting h4:nth-child(1):hover,
-.greeting h4:nth-child(2):hover {
+.greeting h4:nth-child(1):hover {
   animation: shakeItAnimation 1s ease-in-out infinite;
 }
 
-.greeting h4:nth-child(3) {
+.greeting h4:nth-child(2) {
   padding: 10px;
   transition: all 0.1s ease-in-out;
 }
 
-.greeting h4:nth-child(3):hover {
+.greeting h4:nth-child(2):hover {
   background-color: rgba(101, 101, 101, 0.3);
   animation: twinkleAnimation 2s ease-in-out infinite;
 }
 
-.greeting h4:nth-child(3):active {
+.greeting h4:nth-child(2):active {
   background-color: rgba(101, 101, 101, 0.7);
 }
 
@@ -367,14 +391,7 @@ footer {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
-  html,
-  body {
-    width: 100vmin;
-
-    height: 100vmax;
-  }
-
+@media screen and (max-width: 1050px) {
   body {
     overflow-x: hidden;
     font-family: "Jeju Myeongjo", serif;
@@ -412,6 +429,50 @@ footer {
 
   .column--33 {
     width: 100%;
+  }
+
+  .column--20,
+  .column--60,
+  .column--10,
+  .column--40,
+  .column--30 {
+    width: 100%;
+  }
+
+  .column--20:nth-child(1) {
+    display: flex;
+    justify-content: center;
+  }
+
+  .column--60:nth-child(2) {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .column--20:nth-child(3) {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  .column--10:nth-child(1) {
+    display: flex;
+    justify-content: center;
+  }
+
+  .column--60:nth-child(2) {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .column--30:nth-child(3) {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
   }
 
   .column--33:nth-child(1) {
@@ -478,18 +539,6 @@ footer {
 
   .alert-message__text__sm {
     display: block;
-  }
-
-  .bgImage {
-    position: fixed;
-    top: 0;
-    width: 100vmin;
-    height: 100vmax;
-
-    /* Preserve aspet ratio */
-
-    z-index: -1;
-    animation: fadeIn 2s ease-in-out;
   }
 
   /* .todoList__list button {
