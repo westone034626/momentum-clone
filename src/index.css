@@ -130,6 +130,7 @@ header .clock {
 header .greeting__text {
   display: flex;
   justify-content: center;
+  align-items: center;
   font-size: 22px;
 }
 
@@ -155,6 +156,19 @@ header .greeting__text {
   font-family: "Jeju Myeongjo", serif;
   text-align: center;
   font-size: 15px;
+}
+
+.greeting h4:nth-child(2) {
+  padding: 10px;
+  transition: all 0.1s ease-in-out;
+}
+
+.greeting h4:nth-child(2):hover {
+  background-color: rgba(101, 101, 101, 0.3);
+}
+
+.greeting h4:nth-child(2):active {
+  background-color: rgba(101, 101, 101, 0.7);
 }
 
 main {
@@ -187,14 +201,22 @@ main .todoList__form {
   border-radius: 0;
 }
 
-.todoList__form input:focus {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
 .todoList__buttons {
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+.todoList__buttons button {
+  transition: all 0.3s ease-in-out;
+}
+
+.todoList__buttons button:hover {
+  background-color: rgba(101, 101, 101, 0.5);
+}
+
+.todoList__buttons button:active {
+  background-color: rgba(101, 101, 101, 0.7);
 }
 
 .todoList__form button {
@@ -224,12 +246,15 @@ main .todoList__list {
   width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  align-items: center;
 }
 
 .todoList__list button {
   border: none;
   background-color: rgba(0, 0, 0, 0);
   font-size: 18px;
+  transition: all 0.3s ease-in-out;
 }
 
 footer {
@@ -242,6 +267,26 @@ footer {
 
 .todoList__list span {
   margin-left: 10px;
+  display: block;
+  width: 100%;
+  padding: 5px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.todoList__list button:hover {
+  background-color: rgba(101, 101, 101, 0.3);
+}
+
+.todoList__list button:active {
+  background-color: rgba(101, 101, 101, 0.7);
+}
+
+.todoList__list span:hover {
+  background-color: rgba(101, 101, 101, 0.3);
+}
+
+.todoList__list span:active {
+  background-color: rgba(101, 101, 101, 0.7);
 }
 
 .todoList__list input {
@@ -422,5 +467,13 @@ footer {
 
     z-index: -1;
     animation: fadeIn 2s ease-in-out;
+  }
+
+  .alert-message__text {
+    display: none;
+  }
+
+  .alert-message__text__sm {
+    display: block;
   }
 }
