@@ -510,7 +510,7 @@ footer {
   } */
 }
 
-@media screen and (min-width: 601px) and (max-width: 1200px) {
+/* @media screen and (min-width: 601px) and (max-width: 1200px) {
   html,
   body {
     width: 100vmin;
@@ -534,7 +534,7 @@ footer {
     width: 100vmin;
     height: 100vmax;
 
-    /* Preserve aspet ratio */
+    
 
     z-index: -1;
     animation: fadeIn 2s ease-in-out;
@@ -547,4 +547,4 @@ footer {
   .alert-message__text__sm {
     display: block;
   }
-}
+} */
