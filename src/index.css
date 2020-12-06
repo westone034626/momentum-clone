@@ -191,17 +191,15 @@ header .greeting__text {
 
 @keyframes shakeItAnimation {
   0% {
-    transform: none;
-  }
-  33% {
     transform: rotateZ(-30deg);
   }
 
-  66% {
+  50% {
     transform: rotateZ(30deg);
   }
+
   100% {
-    transform: none;
+    transform: rotateZ(-30deg);
   }
 }
 
@@ -282,7 +280,7 @@ main .todoList__form {
 }
 
 .todoList__buttons .todoList__button__active {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 main .todoList__list {
@@ -539,6 +537,68 @@ footer {
 
   .alert-message__text__sm {
     display: block;
+  }
+
+  @keyframes smallPopUpAnimation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes notificationAnimation {
+    0% {
+      transform: none;
+    }
+
+    50% {
+      transform: translateY(5px);
+    }
+
+    100% {
+      transform: none;
+    }
+  }
+
+  .greeting h4:nth-child(2):hover {
+    background-color: rgba(101, 101, 101, 0);
+    animation: twinkleAnimation 0s ease-in-out infinite;
+  }
+
+  .greeting h4:nth-child(2) {
+    padding: 10px;
+    transition: all 0.1s ease-in-out;
+    animation: notificationAnimation 2s ease-in-out infinite;
+  }
+
+  .todoList__list button:hover {
+    background-color: rgba(101, 101, 101, 0);
+    animation: popUpAnimation 0s ease-in-out infinite;
+  }
+
+  .todoList__list button {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .todoList__list span:hover {
+    background-color: rgba(101, 101, 101, 0);
+    animation: twinkleAnimation 0s ease-in-out infinite;
+  }
+
+  .greeting h4:nth-child(1):hover {
+    animation: shakeItAnimation 0s ease-in-out infinite;
+  }
+
+  .greeting h4:nth-child(1) {
+    animation: shakeItAnimation 2s ease-in-out infinite;
   }
 
   /* .todoList__list button {
