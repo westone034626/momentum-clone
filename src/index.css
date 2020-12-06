@@ -192,6 +192,7 @@ header .greeting__text {
 
 .greeting h4:nth-child(3):hover {
   background-color: rgba(101, 101, 101, 0.3);
+  animation: twinkleAnimation 2s ease-in-out infinite;
 }
 
 .greeting h4:nth-child(3):active {
