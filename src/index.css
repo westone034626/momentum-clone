@@ -189,22 +189,36 @@ header .greeting__text {
   font-size: 15px;
 }
 
-@keyframes shakeItAnimation {
+@keyframes notificationAnimation {
   0% {
-    transform: rotateZ(-30deg);
+    transform: none;
   }
 
   50% {
-    transform: rotateZ(30deg);
+    transform: translateY(5px);
   }
 
   100% {
-    transform: rotateZ(-30deg);
+    transform: none;
+  }
+}
+
+@keyframes shakeItAnimation {
+  0% {
+    transform: rotateZ(-15deg);
+  }
+
+  50% {
+    transform: rotateZ(15deg);
+  }
+
+  100% {
+    transform: rotateZ(-15deg);
   }
 }
 
 .greeting h4:nth-child(1):hover {
-  animation: shakeItAnimation 1s ease-in-out infinite;
+  animation: shakeItAnimation 2s ease-in-out infinite;
 }
 
 .greeting h4:nth-child(2) {
@@ -213,12 +227,12 @@ header .greeting__text {
 }
 
 .greeting h4:nth-child(2):hover {
-  background-color: rgba(101, 101, 101, 0.3);
-  animation: twinkleAnimation 2s ease-in-out infinite;
+  animation: notificationAnimation 2s ease-in-out infinite;
 }
 
 .greeting h4:nth-child(2):active {
-  background-color: rgba(101, 101, 101, 0.7);
+  background-color: rgba(101, 101, 101, 0.3);
+  border-radius: 50%;
 }
 
 main {
@@ -551,20 +565,6 @@ footer {
     }
   }
 
-  @keyframes notificationAnimation {
-    0% {
-      transform: none;
-    }
-
-    50% {
-      transform: translateY(5px);
-    }
-
-    100% {
-      transform: none;
-    }
-  }
-
   .greeting h4:nth-child(2):hover {
     background-color: rgba(101, 101, 101, 0);
     animation: twinkleAnimation 0s ease-in-out infinite;
@@ -573,7 +573,6 @@ footer {
   .greeting h4:nth-child(2) {
     padding: 10px;
     transition: all 0.1s ease-in-out;
-    animation: notificationAnimation 2s ease-in-out infinite;
   }
 
   .todoList__list button:hover {
