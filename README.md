@@ -2,6 +2,10 @@
 
 [Link - Optimized desktop environment](https://westone034626.github.io/momentum-clone/)
 
+# 시연영상:
+
+[![링크클릭](https://user-images.githubusercontent.com/26649774/101277047-d92bb400-37f4-11eb-9c26-bc81c1b6d88b.png)](https://youtu.be/erWLDlD1BBs)
+
 # 추가해야 할 기능
 
 - [x] 날씨 정보 1분마다 업데이트
