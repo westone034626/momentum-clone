@@ -236,7 +236,7 @@ const getTaskObj = (text) => {
 
 const turnOffAlert = () => {
   alertMSG.innerHTML = "더블 클릭: 수정모드 / ESC: 취소";
-  alertMSGSM.innerHTML = "더블 클릭: 수정모드";
+  alertMSGSM.innerHTML = "터치 두 번: 수정모드";
 };
 
 function handleSubmit(event) {
