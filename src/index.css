@@ -142,6 +142,7 @@ main {
 .momentum {
   box-sizing: border-box;
   max-width: 900px;
+  max-height: 1000px;
   padding: 35px;
   width: 65%;
   height: 80%;
@@ -533,9 +534,10 @@ footer {
   .momentum {
     box-sizing: border-box;
     padding: 35px;
-    max-width: 400px;
-    width: 92%;
-    height: 80%;
+    max-width: 800px;
+    max-height: 800px;
+    width: 90%;
+    height: 90%;
     overflow: auto;
     background-color: rgba(255, 255, 255, 1);
     box-shadow: 5px 5px 20px;
