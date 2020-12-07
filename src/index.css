@@ -711,11 +711,15 @@ footer {
   }
 
   header .greeting__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 22px;
   }
 
   .greeting input {
     font-size: 18px;
+    width: 50vw;
     border: none;
     padding: 10px 10px;
     text-align: center;
