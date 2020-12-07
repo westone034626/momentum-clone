@@ -520,7 +520,8 @@ footer {
     padding: 10px 0px;
     border: none;
     background-color: rgba(255, 255, 255, 0.1);
-    border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+    /* border-bottom: 0.5px solid rgba(0, 0, 0, 0.2); */
+    border-bottom: 0px solid rgba(0, 0, 0, 0.2);
   }
 
   .column--33 {
@@ -736,7 +737,8 @@ footer {
     padding: 8px 0;
     text-align: center;
     background-color: rgba(255, 255, 255, 1);
-    border-bottom: 0.2px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 0px solid rgba(0, 0, 0, 0.2);
+    /* border-bottom: 0.2px solid rgba(0, 0, 0, 0.2); */
     border-radius: 0;
     margin-bottom: 0;
   }
