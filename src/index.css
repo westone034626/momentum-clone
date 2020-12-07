@@ -628,7 +628,7 @@ footer {
     overflow: auto;
     margin-top: 10px;
     width: 100%;
-    max-height: calc(100vmax - 452px);
+    max-height: 140px;
   }
 
   footer {
