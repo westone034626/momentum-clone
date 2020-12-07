@@ -235,17 +235,17 @@ header .greeting__text {
 }
 
 .greeting {
-  width: 100%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
 }
 
 .greeting input {
   border: none;
-  width: 65%;
+  width: 100%;
   padding: 10px 10px;
   text-align: center;
-
   /* font-family: "Jeju Myeongjo", serif; */
-
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
   border-radius: 0;
   background-color: rgba(0, 0, 0, 0.1);
