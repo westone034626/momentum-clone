@@ -104,7 +104,7 @@ const handleEdit = (event) => {
       li.querySelector(".backBtn").classList.add("non-showing");
     }
     input.name = span.innerHTML;
-    input.maxLength = "27";
+    input.maxLength = "50";
     input.placeholder = "값을 수정하세요";
     input.autocomplete = "off";
     input.addEventListener("focusout", handleFocusOut);
@@ -147,7 +147,7 @@ const pushTodoToTodos = (toDo) => {
 };
 
 const handleFinish = (event) => {
-  if (finishList.children.length > 9) {
+  if (finishList.children.length > 29) {
     alertMSG.innerHTML = "꽉 찼습니다.";
     alertMSGSM.innerHTML = "꽉 찼습니다.";
     setTimeout(turnOffAlert, 5000);
@@ -174,7 +174,7 @@ const handleFinish = (event) => {
 };
 
 const handleBack = (event) => {
-  if (toDoList.children.length > 9) {
+  if (toDoList.children.length > 29) {
     alertMSG.innerHTML = "꽉 찼습니다.";
     alertMSGSM.innerHTML = "꽉 찼습니다.";
     setTimeout(turnOffAlert, 5000);
@@ -259,7 +259,7 @@ const turnOffAlert = () => {
 
 function handleSubmit(event) {
   event.preventDefault();
-  if (toDoList.children.length > 9) {
+  if (toDoList.children.length > 29) {
     toDoInput.value = "";
     alertMSG.innerHTML = "꽉 찼습니다.";
     alertMSGSM.innerHTML = "꽉 찼습니다.";
