@@ -321,6 +321,7 @@ main .todoList__list {
   background-color: rgba(255, 255, 255, 1);
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .todoList__list button {
@@ -339,11 +340,13 @@ footer {
 }
 
 .todoList__list span {
-  margin-left: 10px;
   display: block;
+  margin-left: 10px;
   width: 100%;
   padding: 5px 0;
   transition: all 0.3s ease-in-out;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
 }
 
 @keyframes popUpAnimation {
