@@ -11,12 +11,11 @@ const dayOfWeeks = {
   6: "SAT",
 };
 
-function getTodayDate(y, m, d, dOW) {
+function getTodayDate(y, m, d) {
   return `
     ${y}. 
     ${m + 1 < 10 ? `0${m + 1}` : m + 1}.
-    ${d < 10 ? `0${d}` : d}.
-    ${dOW}
+    ${d < 10 ? `0${d}` : d}
   `;
 }
 
@@ -35,7 +34,7 @@ function getTime() {
   const hours = date.getHours();
   const minutes = date.getMinutes();
   const seconds = date.getSeconds();
-  clockDate.innerHTML = getTodayDate(years, months, days, dayOfWeek);
+  clockDate.innerHTML = getTodayDate(years, months, days);
   clockTitle.innerHTML = getTodayTime(hours, minutes, seconds);
 }
 
