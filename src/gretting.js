@@ -14,6 +14,7 @@ function saveName(text) {
 
 const handleSubmitNewGreeting = (event) => {
   if (event.target.value !== "" && event.key === "Enter") {
+    event.target.lastKey = event.key;
     const div = event.target.parentNode;
     const h4 = document.createElement("h4");
     h4.addEventListener("dblclick", handleEditGreeting);
@@ -22,6 +23,18 @@ const handleSubmitNewGreeting = (event) => {
     div.replaceChild(h4, event.target);
     helloMSG.classList.remove("non-showing");
   } else if (event.key === "Escape") {
+    event.target.lastKey = event.key;
+    const div = event.target.parentNode;
+    const h4 = document.createElement("h4");
+    h4.innerHTML = event.target.name;
+    h4.addEventListener("dblclick", handleEditGreeting);
+    div.replaceChild(h4, event.target);
+    helloMSG.classList.remove("non-showing");
+  }
+};
+
+const handleFocusOutFromNewGreeting = (event) => {
+  if (event.target.lastKey === undefined) {
     const div = event.target.parentNode;
     const h4 = document.createElement("h4");
     h4.innerHTML = event.target.name;
@@ -40,6 +53,7 @@ const handleEditGreeting = (event) => {
   input.value = event.target.innerHTML;
   input.name = event.target.innerHTML;
   input.autocomplete = "off";
+  input.addEventListener("focusout", handleFocusOutFromNewGreeting);
   input.addEventListener("keyup", handleSubmitNewGreeting);
   div.replaceChild(input, event.target);
   input.focus();

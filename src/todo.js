@@ -104,7 +104,7 @@ const handleEdit = (event) => {
       li.querySelector(".backBtn").classList.add("non-showing");
     }
     input.name = span.innerHTML;
-    input.maxLength = "50";
+    input.maxLength = "100";
     input.placeholder = "값을 수정하세요";
     input.autocomplete = "off";
     input.addEventListener("focusout", handleFocusOut);
