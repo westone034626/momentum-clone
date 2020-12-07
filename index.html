@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="./src/index.css" />
   </head>
   <body>
+    <script>
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+
+      window.addEventListener("resize", () => {
+        console.log("resize");
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty("--vh", `${vh}px`);
+      });
+    </script>
     <div class="momentum">
       <header>
         <div class="column--20"><h1>To do list</h1></div>
