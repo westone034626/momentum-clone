@@ -351,7 +351,7 @@ main .todoList__form {
   width: 50%;
   /* font-family: "Jeju Myeongjo", serif; */
   padding: 10px 0px;
-
+  margin-top: -10px;
   border: none;
   background-color: rgba(255, 255, 255, 0.1);
   border-bottom: 0.2px solid rgba(0, 0, 0, 0.2);
@@ -612,7 +612,7 @@ footer {
 
   main .todoList__list {
     /* top: 262px, 46px per a li, margin-top: 10px, footer: 77px*/
-    /* overflow: auto; */
+    overflow: auto;
     margin-top: 10px;
     width: 100%;
     max-height: calc(100vh - 424px);
@@ -759,14 +759,6 @@ footer {
 
   footer {
     font-size: 16px;
-  }
-
-  ::-webkit-scrollbar-track-piece:start {
-    background: transparent url("images/backgrounds/scrollbar.png") repeat-y !important;
-  }
-
-  ::-webkit-scrollbar-track-piece:end {
-    background: transparent url("images/backgrounds/scrollbar.png") repeat-y !important;
   }
 
   /* .todoList__list button {
