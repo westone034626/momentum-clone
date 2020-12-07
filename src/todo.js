@@ -38,10 +38,10 @@ const isLiInTodos = (li) => {
 
 const handleKeyup = (event) => {
   if (event.target.value !== "" && event.key === "Enter") {
+    event.target.lastKey = event.key;
     const li = event.target.parentNode;
     const span = document.createElement("span");
     span.innerHTML = event.target.value;
-
     li.replaceChild(span, event.target);
     if (isLiInTodos(li)) {
       updateTodos(li.id, span.innerHTML);
@@ -57,9 +57,26 @@ const handleKeyup = (event) => {
       li.querySelector(".backBtn").classList.remove("non-showing");
     }
   } else if (event.key === "Escape") {
+    event.target.lastKey = event.key;
     const li = event.target.parentNode;
     const span = document.createElement("span");
 
+    span.innerHTML = event.target.name;
+    li.replaceChild(span, event.target);
+    li.querySelector(".delBtn").classList.remove("non-showing");
+    if (li.querySelector(".finishBtn") !== null) {
+      li.querySelector(".finishBtn").classList.remove("non-showing");
+    }
+    if (li.querySelector(".backBtn") !== null) {
+      li.querySelector(".backBtn").classList.remove("non-showing");
+    }
+  }
+};
+
+const handleFocusOut = (event) => {
+  if (event.target.lastKey === undefined) {
+    const li = event.target.parentNode;
+    const span = document.createElement("span");
     span.innerHTML = event.target.name;
     li.replaceChild(span, event.target);
     li.querySelector(".delBtn").classList.remove("non-showing");
@@ -90,6 +107,7 @@ const handleEdit = (event) => {
     input.maxLength = "27";
     input.placeholder = "값을 수정하세요";
     input.autocomplete = "off";
+    input.addEventListener("focusout", handleFocusOut);
     input.addEventListener("keyup", handleKeyup);
     li.replaceChild(input, span);
     input.focus();
