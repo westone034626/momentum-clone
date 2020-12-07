@@ -480,8 +480,8 @@ footer {
 @media screen and (max-width: 600px) {
   html,
   body {
-    width: 100vmin;
-    height: 100vmax;
+    width: 100%;
+    height: 100%;
   }
 
   *,
@@ -615,14 +615,15 @@ footer {
 
   .momentum {
     max-width: 560px;
-    max-height: calc(100vmax - 40px);
+    max-height: calc(100% - 40px);
     box-sizing: border-box;
     padding: 35px;
     margin-top: 20px;
-    width: calc(100vmin - 40px);
+    width: calc(100% - 40px);
     background-color: rgba(255, 255, 255, 1);
     box-shadow: 5px 5px 20px;
   }
+
   main .todoList__list {
     /* top: 262px, 46px per a li, margin-top: 10px, footer: 77px*/
     overflow: auto;
@@ -792,8 +793,8 @@ footer {
   .bgImage {
     position: fixed;
 
-    width: 100vmin;
-    height: 100vmax;
+    width: 100%;
+    height: 100%;
 
     /* Preserve aspet ratio */
 
