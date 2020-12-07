@@ -630,7 +630,7 @@ footer {
     overflow: auto;
     margin-top: 10px;
     width: 100%;
-    max-height: calc((var(--vh, 1vh) * 100) - 402px);
+    max-height: calc((var(--vh, 1vh) * 100) - 442px);
   }
 
   footer {
