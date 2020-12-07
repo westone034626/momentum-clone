@@ -332,6 +332,7 @@ main .todoList__form {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .todoList__buttons button {
@@ -509,6 +510,7 @@ footer {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 
   .todoList__form button {
@@ -610,10 +612,10 @@ footer {
 
   main .todoList__list {
     /* top: 262px, 46px per a li, margin-top: 10px, footer: 77px*/
-    overflow: auto;
+    /* overflow: auto; */
     margin-top: 10px;
     width: 100%;
-    max-height: calc(100vmax - 424px);
+    max-height: calc(100vh - 424px);
   }
 
   footer {
@@ -757,6 +759,14 @@ footer {
 
   footer {
     font-size: 16px;
+  }
+
+  ::-webkit-scrollbar-track-piece:start {
+    background: transparent url("images/backgrounds/scrollbar.png") repeat-y !important;
+  }
+
+  ::-webkit-scrollbar-track-piece:end {
+    background: transparent url("images/backgrounds/scrollbar.png") repeat-y !important;
   }
 
   /* .todoList__list button {
