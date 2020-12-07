@@ -478,6 +478,12 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
+  html,
+  body {
+    width: 100vw;
+    min-height: 100vh;
+  }
+
   *,
   header,
   footer {
