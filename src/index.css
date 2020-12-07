@@ -629,7 +629,7 @@ footer {
     overflow: auto;
     margin-top: 10px;
     width: 100%;
-    max-height: calc(100vh - 424px);
+    max-height: calc(100% - 424px);
   }
 
   footer {
@@ -788,6 +788,18 @@ footer {
 
   footer {
     font-size: 16px;
+  }
+
+  .bgImage {
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+
+    /* Preserve aspet ratio */
+
+    z-index: -1;
+    animation: fadeIn 2s ease-in-out;
   }
 
   /* .todoList__list button {
