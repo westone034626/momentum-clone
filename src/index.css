@@ -78,7 +78,8 @@ body {
   color: black;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  flex-direction: column;
 }
 input:focus {
   outline: 0;
@@ -140,12 +141,12 @@ main {
 
 .momentum {
   box-sizing: border-box;
-  margin-top: 75px;
   max-width: 900px;
   padding: 35px;
   width: 65%;
-  overflow: auto;
+  height: 80%;
   background-color: rgba(255, 255, 255, 1);
+  overflow: auto;
   /* box-shadow: 10px 10px rgba(0, 0, 0, 0.1); */
   /* box-shadow: 0 0 25px; */
   /* box-shadow: inset 0 0 10px; */
@@ -423,8 +424,10 @@ footer {
     color: black;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    flex-direction: column;
   }
+
   header {
     width: 100%;
     display: flex;
@@ -529,13 +532,13 @@ footer {
 
   .momentum {
     box-sizing: border-box;
-    margin-top: 10px;
     padding: 35px;
     max-width: 400px;
     width: 92%;
-
+    height: 80%;
     overflow: auto;
     background-color: rgba(255, 255, 255, 1);
+    box-shadow: 5px 5px 20px;
   }
 
   footer {
