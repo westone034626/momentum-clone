@@ -623,13 +623,12 @@ footer {
     background-color: rgba(255, 255, 255, 1);
     box-shadow: 5px 5px 20px;
   }
-
   main .todoList__list {
     /* top: 262px, 46px per a li, margin-top: 10px, footer: 77px*/
     overflow: auto;
     margin-top: 10px;
     width: 100%;
-    max-height: calc(100vmax - 424px);
+    max-height: calc(100vmax - 452px);
   }
 
   footer {
