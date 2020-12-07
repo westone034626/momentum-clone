@@ -615,11 +615,11 @@ footer {
 
   .momentum {
     max-width: 560px;
-    max-height: calc(100% - 40px);
+    max-height: calc(100vmax - 40px);
     box-sizing: border-box;
     padding: 35px;
     margin-top: 20px;
-    width: calc(100% - 40px);
+    width: calc(100vmin - 40px);
     background-color: rgba(255, 255, 255, 1);
     box-shadow: 5px 5px 20px;
   }
@@ -629,7 +629,7 @@ footer {
     overflow: auto;
     margin-top: 10px;
     width: 100%;
-    max-height: calc(100% - 424px);
+    max-height: calc(100vmax - 424px);
   }
 
   footer {
@@ -793,8 +793,8 @@ footer {
   .bgImage {
     position: fixed;
 
-    width: 100%;
-    height: 100%;
+    width: 100vmin;
+    height: 100vmax;
 
     /* Preserve aspet ratio */
 
