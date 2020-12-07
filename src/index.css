@@ -614,8 +614,6 @@ footer {
   }
 
   .momentum {
-    position: fixed;
-    overflow: hidden;
     max-width: 560px;
     max-height: calc(100% - 40px);
     box-sizing: border-box;
