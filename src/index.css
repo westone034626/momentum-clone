@@ -738,6 +738,7 @@ footer {
     background-color: rgba(255, 255, 255, 1);
     border-bottom: 0.2px solid rgba(0, 0, 0, 0.2);
     border-radius: 0;
+    margin-bottom: 0;
   }
 
   .todoList__form input,
