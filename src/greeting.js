@@ -10,10 +10,14 @@ const USER_LS = "currentUser",
   SHOWING_F = "showing-f",
   NONE_SHOWING = "non-showing",
   ENTER = "Enter",
-  ESC = "Escape";
+  ESC = "Escape",
+  BLANK = "";
 
 const handleSubmitModifiedGreeting = (event) => {
-  if ((event.target.value !== "" && event.key === ENTER) || event.key === ESC) {
+  if (
+    (event.target.value !== BLANK && event.key === ENTER) ||
+    event.key === ESC
+  ) {
     if (event.key === ENTER) {
       setGreetingName(event.target.value);
       saveName(event.target.value);
