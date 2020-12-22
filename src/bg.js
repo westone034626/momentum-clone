@@ -14,7 +14,8 @@ function generateImg(imgNumber) {
 }
 
 function paintImage(imgNumber) {
-  body.appendChild(generateImg(imgNumber));
+  const img = generateImg(imgNumber);
+  body.appendChild(img);
 }
 
 function genRandom() {
