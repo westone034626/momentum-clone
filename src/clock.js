@@ -1,4 +1,3 @@
-const clockContainer = document.querySelector(".js-clock");
 const clockDate = document.querySelector(".js-clock-date");
 const clockTitle = document.querySelector(".js-clock-time");
 
