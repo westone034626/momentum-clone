@@ -13,19 +13,19 @@ function generateImg(imgNumber) {
   return image;
 }
 
-function paintImage(imgNumber) {
+function setBgImage(imgNumber) {
   const img = generateImg(imgNumber);
   body.appendChild(img);
 }
 
-function genRandom() {
+function generateRandom() {
   const number = Math.floor(Math.random() * IMG_NUMBER);
   return number;
 }
 
 function init() {
-  const randomNumber = genRandom();
-  paintImage(randomNumber);
+  const randomNumber = generateRandom();
+  setBgImage(randomNumber);
 }
 
 init();
