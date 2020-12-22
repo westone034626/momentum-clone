@@ -21,28 +21,26 @@
       <header>
         <div class="column--20"><h1>To do list</h1></div>
         <div class="column--60">
-          <div class="greeting">
-            <form class="js-form form">
-              <input
-                type="text"
-                placeholder="이름이 뭐에요?"
-                required
-                maxlength="10"
-                autofocus="true"
-                autocomplete="off"
-              />
-            </form>
-            <div class="greetings">
-              <h4>🙋‍♂️🙋‍♀️</h4>
-              &nbsp
-              <h4 class="js-greetings"></h4>
-            </div>
+          <form class="js-greetings-form greetings-form">
+            <input
+              type="text"
+              placeholder="이름이 뭐에요?"
+              required
+              maxlength="10"
+              autofocus="true"
+              autocomplete="off"
+            />
+          </form>
+          <div class="js-greetings greetings">
+            <h4 class="js-greetings__emoticon greetings__emoticon">🙋‍♂️🙋‍♀️</h4>
+            &nbsp
+            <h4 class="js-greetings__name greetings__name"></h4>
           </div>
         </div>
         <div class="column--20">
-          <div class="clock js-clock">
-            <h1 class="clock__date js-clock-date"></h1>
-            <h1 class="clock__time js-clock-time"></h1>
+          <div class="js-clock clock">
+            <h1 class="js-clock-date clock__date"></h1>
+            <h1 class="js-clock-time clock__time"></h1>
           </div>
         </div>
       </header>
@@ -89,7 +87,7 @@
     </div>
 
     <script src="./src/clock.js"></script>
-    <script src="./src/gretting.js"></script>
+    <script src="./src/greeting.js"></script>
     <script src="./src/todo.js"></script>
     <script src="./src/bg.js"></script>
     <script src="./src/weather.js"></script>
